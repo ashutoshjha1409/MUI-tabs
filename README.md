@@ -21,7 +21,7 @@ Material UI Tabs with route configured.
         return (
           <div>
             <Tabs onChange = {this._routeConfig.bind(this)} value={this._getCurrentTab()}>
-              <Tab label="Sub Route4" value = {0}>
+              <Tab label="Sub Route0" value = {0}>
                 <ComponentOne />
               </Tab>
               <Tab label="Sub Route1" value = {1}>
@@ -42,16 +42,16 @@ Material UI Tabs with route configured.
       _routeConfig(selectedIndex){
         switch (selectedIndex) {
           case 0:
-            hashHistory.push('/route/subRoute1');
+            hashHistory.push('/route/subRoute0');
             break;
           case 1:
-            hashHistory.push('/route/subRoute2');
+            hashHistory.push('/route/subRoute1');
             break;
           case 2:
-            hashHistory.push('/route/subRoute3');
+            hashHistory.push('/route/subRoute2');
             break;
           case 3:
-            hashHistory.push('/route/subRoute4');
+            hashHistory.push('/route/subRoute3');
             break;
           default:
             hashHistory.push('/route/');
@@ -63,16 +63,16 @@ Material UI Tabs with route configured.
       _getCurrentTab(){
         var route = this.props.params.subRoute;
         switch (route) {
-          case 'subRoute1':
+          case 'subRoute0':
             return 0;
             break;
-          case 'subRoute2':
+          case 'subRoute1':
             return 1;
             break;
-          case 'subRoute3':
+          case 'subRoute2':
             return 2;
             break;
-          case 'subRoute4':
+          case 'subRoute3':
             return 3;
             break;
           default:
